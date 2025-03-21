@@ -1,0 +1,253 @@
+/* Variáveis CSS */
+:root {
+    --color-primary: #d2b48c; /* Bege como cor principal */
+    --color-secondary: #8b7d6b; /* Tom de bege mais escuro */
+    --color-light: #f5f5dc; /* Bege claro para fundos */
+    --color-dark: #3c3c3c; /* Cinza escuro para textos */
+    --color-white: #ffffff;
+    --color-success: #9cb380; /* Verde suave */
+    --color-danger: #e6a9a9; /* Vermelho suave */
+    --color-warning: #e6c88e; /* Amarelo suave */
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 4px;
+    --transition: all 0.3s ease;
+}
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+/* Layout */
+.header {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-dark);
+    box-shadow: var(--shadow);
+}
+
+.header h1 {
+    margin-bottom: 0.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.menu-button {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Seções */
+.section {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+    font-weight: 400;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+}
+
+.section h3 {
+    margin: 1rem 0;
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(210, 180, 140, 0.2);
+}
+
+button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+tr:hover {
+    background-color: rgba(245, 245, 220, 0.3);
+}
+
+/* Status */
+.status-ok {
+    color: var(--color-success);
+    font-weight: 500;
+}
+
+.status-low {
+    color: var(--color-danger);
+    font-weight: 500;
+}
+
+/* Mensagens */
+.success, .alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+}
+
+.success {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.alert {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* Carrinho */
+.cart-item {
+    background-color: var(--color-light);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.cart-item button {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+#venda-total {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: var(--color-secondary);
+}
+
+/* Relatórios */
+.report {
+    background-color: var(--color-light);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    white-space: pre-wrap;
+    font-family: monospace;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+    
+    .menu-button {
+        width: 100%;
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
